@@ -1,4 +1,4 @@
-title:            盼盼
+title:            liuyipz
 description:      我菜炸了
 disqus_shortname:
 reading_time:     true
@@ -11,17 +11,11 @@ url:
 owner:
   name:           liuyipz
   avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
+  bio:            "网络安全底层奋斗者"
   email:          moyumia@outlook.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:
   facebook:
-  github:
-  stackexchange:
-  linkedin:
-  instagram:
-  flickr:
-  tumblr:
   # google plus id, include the '+', eg +mmistakes
   google_plus:
 
