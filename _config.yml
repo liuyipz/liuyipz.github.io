@@ -8,7 +8,6 @@ words_per_minute: 200
 url:
 
 # Owner/author information
-owner:
   name:           liuyipz
   avatar:         avatar.jpg
   bio:            "网络安全底层奋斗者"
@@ -16,11 +15,8 @@ owner:
   # Social networking links used in footer. Update and remove as you like.
   twitter:
   facebook:
-  # google plus id, include the '+', eg +mmistakes
-  google_plus:
-
 # Background image to be tiled on all pages
-background:
+background: 1.jpg
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:
