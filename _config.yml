@@ -1,56 +1,89 @@
-# 头部菜单，title: link
-menu:
-  Whoami: /whoami
-  Github: https://github.com/Fechin
-  Twitter: https://twitter.com/FechinLi
+title:            网络安全行业底层奋斗者
+description:      Describe your website here.
+disqus_shortname:
+#reading_time:     true
+words_per_minute: 20
+# Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
+# When testing locally leave blank or use http://localhost:4000
+url:
 
-# 是否显示目录
-TOC: false
+# Owner/author information
+owner:
+  name:           我菜炸了
+  avatar:         touxiang.jpg
+  bio:            "无所事事，混吃等死。"
+  email:          moyumia@outlook.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:
+  facebook:
+  github:
+  stackexchange:
+  linkedin:
+  instagram:
+  flickr:
+  tumblr:
+  # google plus id, include the '+', eg +mmistakes
+  google_plus:
 
-# 是否自动播放音乐
-autoplay: false
+# Background image to be tiled on all pages
+background:
 
-# 默认音乐
-mp3: 
-  - http://link.hhtjim.com/163/5146554.mp3
-  - http://link.hhtjim.com/qq/001faIUs4M2zna.mp3
+# Analytics and webmaster tools stuff goes here
+google_analytics:
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
 
-# 首页封面图, 为空时取文章的cover作为封面
-welcome_cover: # /img/welcome-cover.jpg
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      false  # publish future dated posts --  true, false (default)
+highlighter: rouge
+markdown:    kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
+sass:
+  sass_dir: _sass
+  style: compressed
 
-# 默认文章封面图
-cover: /img/cover.jpg
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
 
-# 是否关闭默认滚动条
-scrollbar: true
+# Amount of post to show on home page
+paginate: 5
 
-# Gitalk 评论插件（https://github.com/gitalk/gitalk）
-gitalk:
-    # 是否自动展开评论框
-    autoExpand: false
-    # 应用编号
-    clientID: ''
-    # 应用秘钥
-    clientSecret: ''
-    # issue仓库名
-    repo: ''
-    # Github名
-    owner: ''
-    # Github名
-    admin: ['']
-    # Ensure uniqueness and length less than 50
-    id: location.pathname
-    # Facebook-like distraction free mode
-    distractionFreeMode: false
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
 
-# 网站关键字
-keywords: Fechin
-
-# 要使用google_analytics进行统计的话，这里需要配置ID
-google_analytics: 
-
-# 网站ico
-favicon: /img/favicon.png
-
-# rss文件
-rss: atom.xml
+include:
+  - .htaccess
+exclude:
+  - "*.less"
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - config
+  - gulpfile.js
+  - lib
+  - log
+  - node_modules
+  - package.json
+  - spec
+  - tmp
