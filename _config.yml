@@ -11,7 +11,7 @@ TOC: false
 autoplay: false
 
 # 默认音乐
-mp3: 
+mp3:
   - http://link.hhtjim.com/163/5146554.mp3
   - http://link.hhtjim.com/qq/001faIUs4M2zna.mp3
 
@@ -47,7 +47,7 @@ gitalk:
 keywords: Fechin
 
 # 要使用google_analytics进行统计的话，这里需要配置ID
-google_analytics: 
+google_analytics:
 
 # 网站ico
 favicon: /img/favicon.png
