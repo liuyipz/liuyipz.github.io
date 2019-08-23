@@ -7,7 +7,7 @@ url: "https://jekflix.rossener.com" # the base hostname & protocol for your site
 google_analytics: "UA-XXXXXXXX-X"
 
 # User Settings
-username: Jekflix
+username: liuyipz
 user_description: Some text about you.
 disqus_username: disqus_username
 
@@ -37,7 +37,7 @@ plugins:
 # For external links add external: true
 links:
   - title: Home
-    url: /
+    url: liuyipz.githb.io
   - title: About
     url: /about/
   - title: Contact
