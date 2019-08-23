@@ -1,89 +1,47 @@
-title:            网络安全行业底层奋斗者
-description:      Describe your website here.
-disqus_shortname:
-#reading_time:     true
-words_per_minute: 20
-# Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
-# When testing locally leave blank or use http://localhost:4000
-url:
+# Site Settings
+title: Jekflix | A theme for Jekyll
+email: youremail@xyz.com
+description: Some text about your blog.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://jekflix.rossener.com" # the base hostname & protocol for your site
+google_analytics: "UA-XXXXXXXX-X"
 
-# Owner/author information
-owner:
-  name:           我菜炸了
-  avatar:         touxiang.jpg
-  bio:            "无所事事，混吃等死。"
-  email:          moyumia@outlook.com
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:
-  facebook:
-  github:
-  stackexchange:
-  linkedin:
-  instagram:
-  flickr:
-  tumblr:
-  # google plus id, include the '+', eg +mmistakes
-  google_plus:
+# User Settings
+username: Jekflix
+user_description: Some text about you.
+disqus_username: disqus_username
 
-# Background image to be tiled on all pages
-background:
+# Social Media
+# Remove the item if you don't need it
+github_username: github_username
+facebook_username: facebook_username
+twitter_username: twitter_username
+instagram_username: instagram_username
+linkedin_username: linkedin_username
+medium_username: medium_username
 
-# Analytics and webmaster tools stuff goes here
-google_analytics:
-google_verify:
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-future:      false  # publish future dated posts --  true, false (default)
+# Build settings
+markdown: kramdown
 highlighter: rouge
-markdown:    kramdown
+permalink: /:title/
+paginate: 12
+paginate_path: "/page/:num/"
+svg_color: "#ff0a16"
+
+# Plugins
 plugins:
-  - jekyll-sitemap
+  - jemoji
   - jekyll-paginate
-  - jekyll-gist
-  - jekyll-feed
-sass:
-  sass_dir: _sass
-  style: compressed
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Contact
+    url: /contact/
 
-# Amount of post to show on home page
-paginate: 5
-
-kramdown:
-  input: GFM
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  enable_coderay: false
-
-include:
-  - .htaccess
-exclude:
-  - "*.less"
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - CHANGELOG
-  - Capfile
-  - Gemfile
-  - Gruntfile.js
-  - LICENSE
-  - README
-  - Rakefile
-  - config
-  - gulpfile.js
-  - lib
-  - log
-  - node_modules
-  - package.json
-  - spec
-  - tmp
+# Exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']
