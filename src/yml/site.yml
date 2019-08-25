@@ -1,5 +1,5 @@
-name: 常
-title: 【bingo】
+name: Jekflix
+title: Jekflix | A blog theme for Jekyll
 description: Jekflix is a template for Jekyll inspired by Netflix and made by Thiago Rossener.
 tags:
   - blog
@@ -7,6 +7,6 @@ tags:
   - jekyll
   - theme
   - netlify
-email: moyumia@outlook.com
+email: youremail@xyz.com
 disqus_username: disqus_username
 show_hero: true
