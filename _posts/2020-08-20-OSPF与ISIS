@@ -5,17 +5,17 @@ title: OSPF与ISIS
 subtitle:
 description: OSPF与ISIS
 image:
-optimized_image: 
-category: PMP
+optimized_image:
+category: NETWORK
 tags:
-  - network
-
+  - OSPF
+  - ISIS
 author: thiagorossener
 ---
 
 #### OSPF与ISIS有很多共同之处
 都是链路状态路由协议<br>
-都使用SPF算法，VSLM 快速会聚。<br>
+都使用SPF算法，VSLM 快速会聚。<br>S
 从使用的目的来说没有什么区别。<br>
 
 
