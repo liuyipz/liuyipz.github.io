@@ -1,0 +1,71 @@
+---
+date: 2020-08-20 16:30:40
+layout: post
+title: iptabled
+subtitle:
+description: iptables
+image:
+optimized_image:
+category: linux
+tags:
+  - iptabled
+
+author: thiagorossener
+---
+
+##### PostgreSQL介绍及安装教程
+PostgreSQL 是一个免费的对象-关系数据库服务器(ORDBMS)<br>
+https://www.runoob.com/postgresql/postgresql-tutorial.html<br>
+
+##### PostgreSQL For Linux版本官网下载地址
+使用 PostgreSQL 9.6 RHEL/CentOS/Oracle Linux 7 - x86_64<br>
+https://yum.postgresql.org/9.6/redhat/rhel-7-x86_64/repoview/postgresqldbserver96.group.html<br>
+<img class="img-rounded" src="/src/img/pg.png" alt="Thiago Rossener" width="400">
+
+##### PostgreSQL管理工具PgaAdmin下载地址
+PgAdmin 4是一款为PostgreSQL设计的可靠和全面的数据库设计和管理软件，它允许连接到特定的数据库，创建表和运行各种从简单到复杂的SQL语句。它支持的操作系统包括Linux，Windows，Mac OS X。<br>
+https://www.pgadmin.org/download/
+
+##### PostgreSQL数据库安装
+1.将PostgreSQL安装包拷贝至需要安装的Linux服务器。（拷贝方式使用lrzsz进行拷贝或使用其它共享方式）<br>
+<img class="img-rounded" src="/src/img/pg1.png" alt="Thiago Rossener" width="400">
+2.使用rpm -ivh 将安装包依次安装<br>
+安装顺序如下所示<br>
+a. rpm -ivh postgresql96-libs-9.6.15-1PGDG.rhel7.x86_64.rpm<br>
+b. rpm -ivh postgresql96-9.6.15-1PGDG.rhel7.x86_64.rpm<br>
+c. rpm -ivh postgresql96-server-9.6.15-1PGDG.rhel7.x86_64.rpm<br>
+d. rpm -ivh postgresql96-contrib-9.6.15-1PGDG.rhel7.x86_64.rpm<br>
+<img class="img-rounded" src="/src/img/pg2.png" alt="Thiago Rossener" width="400"><br>
+
+3.Pgsql安装完成后需重置数据库<br>
+/usr/pgsql-9.6/bin/postgresql96-setup initdb<br>
+4.启动Pgsql服务<br>
+systemctl start postgresql-9.6<br>
+5.将pgsql服务设置为开机启动<br>
+systemctl enable postgresql-9.6<br>
+6.配置pgsql登录数据库密码<br>
+PostgreSQL数据库安装完以后会默认创建一个管理员的账号postgres用户，默认登录时是不需要密码验证就可以直接登录的<br>
+su postgres		#切换至postgres账户<br>
+bash-4.1$ psql<br>
+alter role postgres with password 'Aihuidi@postgres';  #单引号里是要设置的密码<br>
+\q	#退出数据库<br>
+
+7.配置Pgsql开启端口占用<br>
+vim /var/lib/pgsql/9.6/data/postgresq1.conf<br>
+
+将注释“#”去掉，此步骤允许pgsql开启端口占用，5432端口可以在配置文件中按需更改，注意更改的端口不要与其它Linux服务冲突。<br>
+<img class="img-rounded" src="/src/img/pg3.png" alt="Thiago Rossener" width="400">
+
+8.配置Pgsql开启远程连接<br>
+vim /var/lib/pgsql/9.6/data/pg_hba.conf<br>
+<img class="img-rounded" src="/src/img/pg4.png" alt="Thiago Rossener" width="400"><br>
+最后添加<br>
+host	all		all	0.0.0.0/0	md5     #注意，host为小写，大写会导致服务启动失败。<br>
+修改MedHot为trust，目的是在数据库自动备份任务时，本地登录时不需要输入密码。<br>
+<img class="img-rounded" src="/src/img/pg5.png" alt="Thiago Rossener" width="400"><br>
+9.配置完成后重启Pgsql服务<br>
+systemctl restart postgresql-9.6<br>
+10)查看Pgsql服务状态<br>
+Systemctl status postgresql-9.6.service   #确认服务状态为running<br>
+<img class="img-rounded" src="/src/img/pg6.png" alt="Thiago Rossener" width="400"><br>
+至此数据库安装及配置完成！
